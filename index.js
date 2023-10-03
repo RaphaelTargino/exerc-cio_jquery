@@ -5,11 +5,12 @@ $(document).ready(function () {
 
 })
 
-$("criarTarefa").on("submit", function (e) {
+$("form").on("submit", function (e) {
     e.preventDefault();
-    const tarefa = $("novaTarefa").val();
-    const novoItem = $("<li></li>")
+    const tarefa = $("#novaTarefa").val();
+    const novoItem = $("<li></li>").text(tarefa);
     $(tarefa).appendTo(novoItem);
+    $("#novaTarefa").val("");
 })
 
 
