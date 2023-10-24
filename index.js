@@ -6,11 +6,24 @@ $(document).ready(function () {
 })
 
 $("form").on("submit", function (e) {
+
     e.preventDefault();
+
+    let listaDeTarefa = $("ul")
     const tarefa = $("#novaTarefa").val();
-    const novoItem = $("<li></li>").text(tarefa);
-    $(tarefa).appendTo(novoItem);
+    const novoItem = $ ("<li></li>").text(tarefa);
+    $(listaDeTarefa).append(novoItem);
     $("#novaTarefa").val("");
 })
+
+$('ul').on('click', 'li', function() {
+
+
+
+    $(this).css('text-decoration', 'line-through');
+
+
+
+});
 
 
